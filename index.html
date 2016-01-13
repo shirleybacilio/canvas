@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tag Canvas</title>
+	<style type="text/css" >
+		canvas{
+			border: 3px solid black;
+			
+		}
+	</style>
+</head>
+<body>
+	<canvas id="miCanvas">
+		Actualiza tu navegador
+	</canvas>
+	<script type="text/javascript">
+	var canvas = document.getElementById('miCanvas');
+
+	if(canvas.getContext)
+	{	
+		var grados = 270;
+		var rad = (Math.PI)*grados;
+		var ctx = miCanvas.getContext('2d');
+
+		ctx.fillStyle = "#ddd";
+		ctx.fillRect(20,20,50,50);
+		ctx.fillStyle = "rgb(100,200,100)"
+		ctx.fillRect(100,100,50,50);
+		ctx.fillStyle = "yellow";
+		ctx.fillRect(200,100,50,50);
+		ctx.fillStyle = "blue";
+		ctx.arc(140, 50, 40,0, 6.3);
+		ctx.fill ();
+	}
+	else{
+		alert("Cambia tu anvegador")
+	}
+	</script>
+</body>
+</html>
